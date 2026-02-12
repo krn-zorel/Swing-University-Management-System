@@ -1,0 +1,19 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+
+# Java build folders
+bin/
+build/
+out/
+
+# IntelliJ files (in case)
+.idea/
