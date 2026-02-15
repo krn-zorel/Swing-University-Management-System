@@ -3,7 +3,7 @@ package university.management.system;
 import java.awt.Image;
 
 import javax.swing.*;
-import java.awt.*;
+// import java.awt.*;
 
 public class Splash extends JFrame{
 
