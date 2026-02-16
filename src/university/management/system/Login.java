@@ -1,7 +1,9 @@
 package university.management.system;
 
+
 import javax.swing.*;
 import java.awt.*;
+import com.formdev.flatlaf.FlatDarkLaf;
 
 public class Login extends JFrame{
     
@@ -44,6 +46,12 @@ public class Login extends JFrame{
 
     }
     public static void main(String[] args){
+        try {
+            UIManager.setLookAndFeel(new FlatDarkLaf());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         // new Login(); //Obsolete
         //Modern and Safe
         SwingUtilities.invokeLater(() -> {
