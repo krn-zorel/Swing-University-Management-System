@@ -2,14 +2,14 @@ package university.management.system;
 
 
 import javax.swing.*;
-import java.awt.*;
+// import java.awt.*;
 import com.formdev.flatlaf.FlatDarkLaf;
 
 public class Login extends JFrame{
     
     Login(){
         //Window Color and Setting the layout to null
-        getContentPane().setBackground(Color.BLACK);
+        // getContentPane().setBackground(Color.BLACK);
         setLayout(null);
         
         //Window
@@ -21,7 +21,7 @@ public class Login extends JFrame{
         //Username Label
         JLabel labelForUsername = new JLabel("Username");
         labelForUsername.setBounds(50,50,100,20);
-        labelForUsername.setBackground(Color.WHITE);
+        // labelForUsername.setBackground(Color.WHITE);
         add(labelForUsername);
 
         //Username Input
@@ -33,7 +33,7 @@ public class Login extends JFrame{
         //Password Label
         JLabel labelForPassword = new JLabel("Password");
         labelForPassword.setBounds(50,100,100,20);
-        labelForPassword.setBackground(Color.WHITE);
+        // labelForPassword.setBackground(Color.WHITE);
         add(labelForPassword);
 
         //Password Input
