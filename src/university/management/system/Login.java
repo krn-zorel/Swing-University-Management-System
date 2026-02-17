@@ -1,9 +1,11 @@
 package university.management.system;
 
 
+
 import javax.swing.*;
-// import java.awt.*;
-import com.formdev.flatlaf.FlatDarkLaf;
+import java.awt.*;
+// import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatDarculaLaf;
 
 public class Login extends JFrame{
     
@@ -41,16 +43,40 @@ public class Login extends JFrame{
         inputForPassword.setBounds(130,100,100,20);
         add(inputForPassword);
 
+        //Login Button
+        JButton loginButton = new JButton("Login");
+        loginButton.setBounds(40,140,120,30);
+        loginButton.setForeground(Color.PINK);
+        loginButton.setFont(new Font("serif",Font.BOLD,16));
+        add(loginButton);
+
+
+        //Cancel Button
+        JButton cancelButton = new JButton("Cancel");
+        cancelButton.setBounds(180,140,120,30);
+        cancelButton.setForeground(Color.PINK);
+        cancelButton.setFont(new Font("serif",Font.BOLD,16));
+        add(cancelButton);
+
+
         //Best Practice to render this at last
         setVisible(true);
 
     }
     public static void main(String[] args){
+        // try {
+        //     UIManager.setLookAndFeel(new FlatDarkLaf());
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+
+
         try {
-            UIManager.setLookAndFeel(new FlatDarkLaf());
+            UIManager.setLookAndFeel(new FlatDarculaLaf());
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
         // new Login(); //Obsolete
         //Modern and Safe
