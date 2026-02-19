@@ -4,11 +4,15 @@ package university.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+
 // import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatDarculaLaf;
 
-public class Login extends JFrame{
+public class Login extends JFrame implements ActionListener{
     
+    JButton loginButton, cancelButton;
+
     Login(){
         //Window Color and Setting the layout to null
         // getContentPane().setBackground(Color.BLACK);
@@ -44,18 +48,20 @@ public class Login extends JFrame{
         add(inputForPassword);
 
         //Login Button
-        JButton loginButton = new JButton("Login");
+        loginButton = new JButton("Login");
         loginButton.setBounds(40,140,120,30);
         loginButton.setForeground(Color.PINK);
         loginButton.setFont(new Font("serif",Font.BOLD,16));
+        loginButton.addActionListener(this);
         add(loginButton);
 
 
         //Cancel Button
-        JButton cancelButton = new JButton("Cancel");
+        cancelButton = new JButton("Cancel");
         cancelButton.setBounds(180,140,120,30);
         cancelButton.setForeground(Color.PINK);
         cancelButton.setFont(new Font("serif",Font.BOLD,16));
+        cancelButton.addActionListener(this);
         add(cancelButton);
 
         //add the image for login below
@@ -66,6 +72,15 @@ public class Login extends JFrame{
         setVisible(true);
 
     }
+
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource() == loginButton){
+
+        }else if(ae.getSource() == cancelButton){
+            setVisible(false);
+        }
+    }
+
     public static void main(String[] args){
         try {
             UIManager.setLookAndFeel(new FlatDarculaLaf());
