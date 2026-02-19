@@ -58,19 +58,15 @@ public class Login extends JFrame{
         cancelButton.setFont(new Font("serif",Font.BOLD,16));
         add(cancelButton);
 
+        //add the image for login below
+        //***************/
+
 
         //Best Practice to render this at last
         setVisible(true);
 
     }
     public static void main(String[] args){
-        // try {
-        //     UIManager.setLookAndFeel(new FlatDarkLaf());
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
-
-
         try {
             UIManager.setLookAndFeel(new FlatDarculaLaf());
         } catch (Exception e) {
@@ -78,8 +74,7 @@ public class Login extends JFrame{
         }
 
 
-        // new Login(); //Obsolete
-        //Modern and Safe
+        
         SwingUtilities.invokeLater(() -> {
             new Login();
         });
