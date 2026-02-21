@@ -2,6 +2,8 @@ package university.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import com.formdev.flatlaf.FlatDarculaLaf;
+
 
 public class Project extends JFrame{
 
@@ -17,12 +19,25 @@ public class Project extends JFrame{
         JLabel image = new JLabel(i3);
         add(image);
 
-        //Creating the Menu Bar
+        //Creating the Menu Bar //Start****
         JMenuBar menuBar = new JMenuBar();
+
+        //Menu //1st menu ********
         JMenu newInformation = new JMenu("New Information");
+        newInformation.setForeground(Color.BLUE);
         menuBar.add(newInformation);
+
+        //This is a dropdown inside JMenu 
+        JMenuItem facultyInfo = new JMenuItem("New Faculty Information");
+        facultyInfo.setForeground(Color.WHITE);
+        newInformation.add(facultyInfo);
+
+        //This is a dropdown inside JMenu 
+        JMenuItem studentInfo = new JMenuItem("New Faculty Information");
+        studentInfo.setForeground(Color.WHITE);
+        newInformation.add(studentInfo);
         
-        setJMenuBar(menuBar); //For menubar there is no add function we use setMenubar
+        setJMenuBar(menuBar); //For menubar there is no add function we use setMenubar //Finish ****
 
 
 
@@ -30,6 +45,11 @@ public class Project extends JFrame{
     }
     
     public static void main(String[] args){
+        try {
+            UIManager.setLookAndFeel(new FlatDarculaLaf());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         SwingUtilities.invokeLater(() -> {
             new Project();
