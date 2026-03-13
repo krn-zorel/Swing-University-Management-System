@@ -9,12 +9,12 @@ public class Project extends JFrame{
 
 
     Project(){
-        setSize(1540,850);
+        setSize(1300,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/third.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(1500,750, Image.SCALE_DEFAULT);
+        Image i2 = i1.getImage().getScaledInstance(1250,550, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
         add(image);
@@ -33,9 +33,26 @@ public class Project extends JFrame{
         newInformation.add(facultyInfo);
 
         //This is a dropdown inside JMenu 
-        JMenuItem studentInfo = new JMenuItem("New Faculty Information");
+        JMenuItem studentInfo = new JMenuItem("New Student Information");
         studentInfo.setForeground(Color.WHITE);
         newInformation.add(studentInfo);
+
+
+        //Old Details
+        JMenu details = new JMenu("View Details");
+        details.setForeground(Color.BLUE);
+        menuBar.add(details);
+
+        //This is a dropdown inside JMenu 
+        JMenuItem facualtyDetails = new JMenuItem("View Faculty Details");
+        facualtyDetails.setForeground(Color.WHITE);
+        details.add(facualtyDetails);
+
+        //This is a dropdown inside JMenu 
+        JMenuItem studentDetails = new JMenuItem("View Student Details");
+        studentDetails.setForeground(Color.WHITE);
+        details.add(studentDetails);
+        
         
         setJMenuBar(menuBar); //For menubar there is no add function we use setMenubar //Finish ****
 
