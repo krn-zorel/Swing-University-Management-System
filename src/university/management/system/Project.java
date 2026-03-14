@@ -52,6 +52,21 @@ public class Project extends JFrame{
         JMenuItem studentDetails = new JMenuItem("View Student Details");
         studentDetails.setForeground(Color.WHITE);
         details.add(studentDetails);
+
+        //Leave
+        JMenu leave = new JMenu("Leave");
+        leave.setForeground(Color.BLUE);
+        menuBar.add(leave);
+
+        //This is a dropdown inside JMenu 
+        JMenuItem facualtyLeave = new JMenuItem("Facualty Leave");
+        facualtyDetails.setForeground(Color.WHITE);
+        leave.add(facualtyLeave);
+
+        //This is a dropdown inside JMenu 
+        JMenuItem studentLeave = new JMenuItem("Student Leave");
+        studentLeave.setForeground(Color.WHITE);
+        leave.add(studentLeave);
         
         
         setJMenuBar(menuBar); //For menubar there is no add function we use setMenubar //Finish ****
